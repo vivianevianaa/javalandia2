@@ -1,0 +1,20 @@
+package principal;
+
+import java.time.LocalDate;
+import contribuintes.Contribuinte;
+
+public class CalculaBeneficios {
+
+	public static void main(String[] args) {
+		
+
+		Contribuinte contribuinte1 = new Contribuinte("João da Silva", "001-X", LocalDate.of(2012, 4, 25) , true, 0.11, 5500.00);
+		Contribuinte contribuinte2 = new Contribuinte("Maria Cunha", "002-9", 30/6/2011 , true, 0.10, 3000.00);
+		Contribuinte contribuinte3 = new Contribuinte("Manoel José", "003-4", 30/6/1978 , false, 0.08, 1500.00);
+
+		System.out.println(imprimirContribuicaoMensal(contribuinte1));
+		System.out.println(imprimirContribuicaoMensal(contribuinte2));
+		System.out.println(imprimirContribuicaoMensal(contribuinte3));
+	}
+	
+}
