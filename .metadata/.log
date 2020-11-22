@@ -13351,3 +13351,18 @@ Caused by: java.io.IOException: Source ref refs/heads/master doesn't resolve to 
 
 !ENTRY org.eclipse.egit.ui 4 0 2020-11-22 20:11:11.551
 !MESSAGE Can't connect to any repository: https://github.com/vivianevianaa/Javalandia.git (An internal Exception occurred during push: Source ref refs/heads/master doesn't resolve to any object.)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-22 20:21:03.409
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.dMRFLHDt
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-22 20:21:03.410
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.dMRFLHDt
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-22 20:21:03.412
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2020-11-22 20:21:03.413
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.dMRFLHDt => OK
+
+!ENTRY org.eclipse.ui 2 2 2020-11-22 20:21:06.128
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)
