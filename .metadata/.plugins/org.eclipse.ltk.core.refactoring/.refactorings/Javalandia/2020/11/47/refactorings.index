@@ -1,0 +1,5 @@
+1605821982239	Rename type 'ContribuinteSemSalario'
+1605823088796	Encapsulate field 'salario'
+1605823155813	Encapsulate field 'valorAposentadoria'
+1605824146700	Rename compilation unit 'ContribuienteComSalario.java'
+1605824620654	Encapsulate field 'valorMaximoAposentadoria'

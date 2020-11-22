@@ -1,0 +1,16 @@
+package contribuintes;
+
+import java.time.LocalDate;
+
+public class ContribuintePublico extends ContribuinteComSalario {
+
+	public ContribuintePublico(String nome, String cpf, LocalDate dataAdmissao, boolean status, double taxaContribuicao,
+			double salario) {
+		super(nome, cpf, dataAdmissao, status, taxaContribuicao, salario);
+	}
+	
+	
+	public double calcularContribuicaoMensal(double salario, double taxaContribuicao) {
+		return this.salario * this.taxaContribuicao;
+	}
+}

@@ -1,0 +1,40 @@
+package contribuintes;
+
+import java.time.LocalDate;
+
+public class ContribuintePrivado extends ContribuinteComSalario {
+	private static double valorMaximoAposentadoria = 5000;
+
+	public ContribuintePrivado(String nome, String cpf, LocalDate dataAdmissao, boolean status, double taxaContribuicao,
+			double salario, double valorMaximoAposentadoria) {
+		super(nome, cpf, dataAdmissao, status, taxaContribuicao, salario);
+		ContribuintePrivado.setValorMaximoAposentadoria(valorMaximoAposentadoria);
+	}
+
+	public static double getValorMaximoAposentadoria() {
+		return valorMaximoAposentadoria;
+	}
+
+	public static void setValorMaximoAposentadoria(double valorMaximoAposentadoria) {
+		ContribuintePrivado.valorMaximoAposentadoria = valorMaximoAposentadoria;
+	}
+
+	@Override
+	public String toString() {
+		return "ContribuintePrivado [salario=" + salario + ", taxaContribuicao=" + taxaContribuicao + ", getSalario()="
+				+ getSalario() + ", toString()=" + super.toString() + ", getDataAdmissao()=" + getDataAdmissao()
+				+ ", getNome()=" + getNome() + ", getCpf()=" + getCpf() + ", isStatus()=" + isStatus()
+				+ ", getTaxaContribuicao()=" + getTaxaContribuicao() + ", getClass()=" + getClass() + ", hashCode()="
+				+ hashCode() + "]";
+	}
+
+	@Override
+	public double calcularContribuicaoMensal() {
+		if (this.salario > ContribuintePrivado.valorMaximoAposentadoria) {
+			return ContribuintePrivado.valorMaximoAposentadoria * this.taxaContribuicao;
+		} else {
+			return this.salario * this.taxaContribuicao;
+		}
+	}
+	
+}

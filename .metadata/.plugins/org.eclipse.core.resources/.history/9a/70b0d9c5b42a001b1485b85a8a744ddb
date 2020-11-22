@@ -1,0 +1,31 @@
+package contribuintes;
+
+import java.time.LocalDate;
+
+public abstract class ContribuinteComSalario extends Contribuinte {
+	private double salario;	
+	
+	public ContribuienteComSalario(String nome, String cpf, LocalDate dataAdmissao, boolean status,
+			double taxaContribuicao, double salario) {
+		super(nome, cpf, dataAdmissao, status, taxaContribuicao);
+		this.setSalario(salario);
+	}
+	
+	public double getSalario() {
+		return salario;
+	}
+
+	public void setSalario(double salario) {
+		this.salario = salario;
+	}
+
+	@Override
+	public String toString() {
+		return "ContribuienteComSalario [salario=" + salario + ", taxaContribuicao=" + taxaContribuicao
+				+ ", getSalario()=" + getSalario() + ", getDataAdmissao()=" + getDataAdmissao() + ", getNome()="
+				+ getNome() + ", getCpf()=" + getCpf() + ", isStatus()=" + isStatus() + ", getTaxaContribuicao()="
+				+ getTaxaContribuicao() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode() + ", toString()="
+				+ super.toString() + "]";
+	}
+	
+}

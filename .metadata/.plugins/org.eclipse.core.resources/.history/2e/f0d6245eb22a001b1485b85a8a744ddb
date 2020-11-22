@@ -1,0 +1,5 @@
+package contribuintes;
+
+public class ContribuienteComSalario extends Contribuinte {
+	private double salario;	
+}

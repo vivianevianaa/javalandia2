@@ -2,37 +2,30 @@ package contribuintes;
 
 import java.time.LocalDate;
 
-public class Contribuinte {
+public abstract class Contribuinte {
 	
 	private String nome;
 	private String cpf;
 	private LocalDate dataAdmissao;
 	private boolean status;
-	private double taxaContribuicao;
-	private double salario;	
+	protected double taxaContribuicao;
 	
 
-	public Contribuinte(String nome, String cpf, LocalDate dataAdmissao, boolean status, double taxaContribuicao,
-			double salario) {
+	public Contribuinte(String nome, String cpf, LocalDate dataAdmissao, boolean status, double taxaContribuicao) {
 		this.nome = nome;
 		this.cpf = cpf;
 		this.dataAdmissao = dataAdmissao;
 		this.status = status;
 		this.taxaContribuicao = taxaContribuicao;
-		this.salario = salario;
 	}
 	
 	
-	public double calcularContribuicaoMensal(double taxaContribuicao, double salario) {
-		
-		return (double) taxaContribuicao*salario;
-	}
+	public abstract double calcularContribuicaoMensal();
 	
-	public void imprimirContribuicaoMensal(Contribuinte contribuinte) {
-		double contribuicao = calcularContribuicaoMensal(taxaContribuicao, salario);
-		System.out.println("A contribuição mensal de " + contribuinte.getNome() + " é de R$ " + contribuicao + "." );
+	
+	public void imprimirContribuicaoMensal() {
+		System.out.printf("A contribuição mensal de %s é de R$ %.2f%n", this.nome, calcularContribuicaoMensal());
 	}
-
 
 	public LocalDate getDataAdmissao() {
 		return dataAdmissao;
@@ -83,14 +76,4 @@ public class Contribuinte {
 		this.taxaContribuicao = taxaContribuicao;
 	}
 
-
-	public double getSalario() {
-		return salario;
-	}
-
-
-	public void setSalario(double salario) {
-		this.salario = salario;
-	}
-	
-}
+}	
